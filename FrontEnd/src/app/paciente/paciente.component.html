@@ -1,0 +1,15 @@
+<form [formGroup]="PacienteForm" (ngSubmit)="Salvar">
+    <label class="control-label">Medicos Responsáveis:</label>
+    <select formControlName="medicos" class="form-control">
+        <option *ngFor="let medico of medicos">{{ medico }}</option>
+    </select>
+
+    <label class="control-label">Nome do paciente:</label>
+    <input formControlName="paciente" class="form-control" type="text">
+
+    <label class="control-label">Tipo Sanguineo</label>
+    <select formControlName="tipoSanguineo" class="form-control">
+        <option *ngFor="let tipo of tipoSanguineo">{{tipo}}</option>
+    </select>
+</form>
+<button type="submit">Salvar</button>
